@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Different components layout using same Renderless component</h1>
+    <tagInputOnlyEnter v-model="tags" style="margin-bottom: 2rem" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import tagInputOnlyEnter from "@/components/tagInputOnlyEnter.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    tagInputOnlyEnter,
+  },
+  data() {
+    return {
+      tags: ["Design", "Testing"],
+    };
   },
 };
 </script>
